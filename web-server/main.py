@@ -1,8 +1,8 @@
-import store
-
-'''
+# from os import name
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+
+import store
 
 app = FastAPI()
 
@@ -17,12 +17,13 @@ def get_list():
 
 
 @app.get("/contact", response_class=HTMLResponse)
+# @app.get("/contact")
 def get_list():
+    # return {"name": "Platzi"}
     return """
         <h1>Hola soy una pagina</h1>
         <p>soy un parrafo</p>
     """
-'''
 
 
 def run():
